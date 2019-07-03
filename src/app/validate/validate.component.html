@@ -1,0 +1,46 @@
+
+<div class='laila'>
+    
+  <label for="challanid" type="label">Validate your previous challan</label><br/><br/>
+    <input  type="text1"  placeholder="Enter the challan ID" #challanid>
+    <br/><br/>
+    
+      <button type="submit"
+              (click) = "getOffense(challanid.value)">Validate challan</button><br/><br/><br/>
+    
+  <h5>
+      Name : {{obj.offenderName}}
+  </h5>
+  
+  <h5>
+      License : {{obj.license}}
+  </h5>
+  <h5>
+      E-mail ID : {{obj.email}}
+  </h5>
+  <h5>
+      Police ID : {{obj.policeid}}
+  </h5>
+  <h5>
+      Offenses : {{obj.offense}}
+  </h5>
+  <h5>
+      Vehicle Number : {{obj.vehicleno}}
+  </h5>
+
+  <h5>
+      Challan ID : {{obj.challanid}}
+  </h5>
+  <h5 type="hash">
+      Transaction ID : {{str}}
+      {{str1}}
+  </h5>
+  
+
+
+  
+  <br /><br />
+  <a routerLink="/" routerLinkActive="active">
+  <button type="submit">Go back to home page</button>
+</a>
+</div>

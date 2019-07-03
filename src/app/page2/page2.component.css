@@ -1,0 +1,32 @@
+
+.laila{
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 350px;
+	padding: 30px;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  background-image: url(../../assets/img/bgpaint2.png);
+  height : 656px;
+
+}
+
+.laila button[type=submit] {
+  width: 70%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.laila button[type=submit]:hover {
+  background-color: #45a049;
+}
+.laila h5{
+  font-size: 15px;
+  height: 20px;
+}

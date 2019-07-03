@@ -1,0 +1,125 @@
+<app-header></app-header>
+<div class="form-style-8">
+     <form [formGroup]="angForm" novalidate>
+      
+
+        
+            <a type="link" routerLink="/validate" routerLinkActive="active"> 
+              Validate challan
+            </a>
+        <p></p>
+<img src="../../assets/img/output-onlinepngtools.png">
+       <!-- <label for="name" type="label">Name</label>-->
+        <input type="text" formControlName="offenderName" placeholder="Enter your full name" #offenderName>
+        <div *ngIf="angForm.controls['offenderName'].invalid && (angForm.controls['offenderName'].dirty || angForm.controls['offenderName'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['offenderName'].errors.required">
+            Offender Name is required.
+          </div>
+        </div>      
+     
+     
+         <!--<label for="license" type="label">License Number</label>--> 
+        <input formControlName="license" type="text"  placeholder="Enter your License number" #license>
+        <div *ngIf="angForm.controls['license'].invalid && (angForm.controls['license'].dirty || angForm.controls['license'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['license'].errors.pattern">
+            Please enter a valid license.
+          </div>
+          <div *ngIf="angForm.controls['license'].errors.maxlength">
+            Please enter a valid license.
+          </div>
+          <div *ngIf="angForm.controls['license'].errors.required">
+            Please enter a valid license.
+          </div>
+        </div>  
+        
+        <input formControlName="vehicleno" type="text"  placeholder="Enter your vehicle number" #vehicleno>
+        <div *ngIf="angForm.controls['vehicleno'].invalid && (angForm.controls['vehicleno'].dirty || angForm.controls['vehicleno'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['vehicleno'].errors.pattern">
+            Please enter a valid Vehicle No.
+          </div>
+          <div *ngIf="angForm.controls['vehicleno'].errors.maxlength">
+            Please enter a valid Vehicle No.
+          </div>
+          <div *ngIf="angForm.controls['vehicleno'].errors.required">
+            Please enter a valid Vehicle No.
+          </div>
+        </div>      
+      
+        <!--<label for="email" type= "label">E-mail ID</label>--> 
+         <input formControlName="email"    type="email"  placeholder="Enter your Email-ID" #email>
+         <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['email'].errors.pattern">
+            E-mail ID is incorrect.
+          </div>
+          <div *ngIf="angForm.controls['email'].errors.required">
+            E-mail ID is incorrect.
+          </div>
+        </div>     
+         
+      
+
+      
+        <!--<label for="policeid" type="label">Policeman's unique-id</label>-->
+        <input formControlName="policeid"  type="text" placeholder="Enter the Policeman's unique ID" #policeid>
+        <div *ngIf="angForm.controls['policeid'].invalid && (angForm.controls['policeid'].dirty || angForm.controls['policeid'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['policeid'].errors.maxlength">
+            Please enter a valid police ID.
+          </div>
+          <div *ngIf="angForm.controls['policeid'].errors.required">
+            Please enter a valid police ID.
+          </div>
+        </div>     
+         
+
+  
+  
+      <!--<label for="offense" type = "label">Select Offense</label> 
+      <select formControlName="offense"  id="offense" name="offense" #offense>
+        <option value="1">Not Wearing Helmet (₹200)</option>
+        <option value="2">Rash driving (₹500)</option>
+        <option value="3">Drunk driving (₹2000)</option>
+        <option value="4">Breaking the traffic signal (₹400)</option>
+        <option value="5">Not wearing seatbelt (₹200)</option>
+        <option value="6">Parked in a NO-PARKING zone (₹300)</option>
+      </select>
+      <div *ngIf="angForm.controls['offense'].invalid && (angForm.controls['offense'].dirty || angForm.controls['offense'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['offense'].errors.required">
+          Offense is required.
+        </div>
+      </div>     <br/><br/><br/> -->
+ 
+      <mat-select-autocomplete class="grid-7-11"
+        
+        [placeholder]="'Select your offenses'"
+        [errorMsg]="errorMessage"
+        [showErrorMsg]="showError"
+        [options]="options"
+        [display]="'display'"
+        [value]="'value'"
+        [labelCount]="2"
+        [multiple]='true'
+        [selectedOptions]="selectedOptions"
+        (selectionChange)="getSelectedOptions($event)"
+        (selectionReset)="onResetSelection()">
+      </mat-select-autocomplete>
+      
+      <div> Selected offenses are:
+        <span *ngFor="let option of selected; let index = index">{{option}}<span *ngIf="index !== selectedOptions.length-1">, </span></span>
+      </div>
+      
+      
+       
+      
+      
+   
+
+      <a routerLink="/page2" routerLinkActive="active"> 
+        <button type="submit" (click) = "assignID(policeid.value)"
+                              (click) = "sendobject(offenderName.value, license.value, email.value, policeid.value, this.selected, vehicleno.value)"
+                              [disabled]="angForm.pristine || angForm.invalid"  >
+          Confirm
+        </button>
+      </a>
+    </form>
+</div>
+

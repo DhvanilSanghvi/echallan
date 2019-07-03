@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="sunaina">
+        <br/><br/><br/><br/><br/>
+        
+        
+
+        <label for="challanid" type="label">Enter Challan ID</label><br/><br/><br/>
+        <input type="text1"  placeholder="Enter the challan ID" #challanid>
+        <br/><br/><br/><br/>
+        
+    <p></p>
+    <p></p>
+    <p></p>
+    <a routerLink="/page4" routerLinkActive="active">
+        <button type="submit" 
+                (click)="addOffense(challanid.value)">Create challan</button>
+    </a>
+</div>
+

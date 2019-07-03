@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class='laila'>
+    <div *ngFor="let police of policelist; let i =index">
+            <div *ngIf="police.policeid==importedidvalue" ><br /><br /><br />
+      <img src="../../assets/img/policeman{{police.policeid}}.jpg" alt="Policeman Photo" width="150" height="150"><br /><br /><br /><br />
+  <h5>
+      Name : {{police.name}}
+  </h5>
+  
+  <h5>
+      ID : {{police.policeid}}
+  </h5>
+  <h5>
+      Police Station : {{police.policeStation}}
+  </h5><p></p>
+  </div>
+
+  </div>
+  <br /><br />
+  <a routerLink="/page3" routerLinkActive="active">
+  <button type="submit">Confirm</button>
+</a>
+</div>
