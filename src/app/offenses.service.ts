@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class OffensesService {
 
-  uri = 'http://localhost:4000/Offenses';
+  uri = 'http://40.79.18.3:4000/Offenses';
  
   constructor(private http: HttpClient) { }
 

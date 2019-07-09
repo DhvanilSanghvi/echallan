@@ -46,7 +46,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class OffenderService { 
 
-  uri = 'http://localhost:3000/api/Offender';
+  uri = 'http://40.79.18.3:3000/api/Offender';
  
   constructor(private http: HttpClient) { }
 
