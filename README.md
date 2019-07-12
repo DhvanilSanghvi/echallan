@@ -12,6 +12,14 @@ First clone the whole project on your system. Then, follow these steps :
 
 ### Installing the business network on hyperledger fabric and creating REST api
 
+Prerequisites:
+
+ - Hyperledger fabric is started by running the command in the fabric-dev-servers directory.
+```
+export FABRIC_VERSION=hlfv11 && ./startFabric.sh && ./createPeerAdminCard.sh
+
+```
+
 1. Go to Business Network directory
 2. Install the tutorial-network@0.0.7.bna on hyperledger fabric using :
 
@@ -25,8 +33,8 @@ This will run a composer REST server on https://localhost:3000/
 
 Prerequisites:
 
-Install Mongodb.
-Install nodemon using 
+ - Install Mongodb.
+ - Install nodemon using 
 ```
 sudo apt install nodemon
 ```
@@ -41,6 +49,10 @@ nodemon server
 The node server will then run on https://localhost:4000
 
 ### Serving the angular app
+
+Prerequisites:
+
+ - Angular CLI is installed.
 
 In the root directory, use the following command :
 ```
