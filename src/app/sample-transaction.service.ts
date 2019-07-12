@@ -45,7 +45,7 @@ import { Observable } from 'rxjs';
 export class SampleTransactionService {
   
 
-  uri = 'http://40.79.18.3:3000/api/SampleTransaction';
+  uri = 'http://localhost:3000/api/SampleTransaction';
  
   constructor(private http: HttpClient) { }
 
