@@ -27,25 +27,25 @@ Prerequisites:
 
 Install Mongodb.
 Install nodemon using 
-'''
+```
 sudo apt install nodemon
-'''
+```
 
 
 1. Go to api directory
 2. Run the following command :
-'''
+```
 nodemon server
-'''
+```
 
 The node server will then run on https://localhost:4000
 
 ### Serving the angular app
 
 In the root directory, use the following command :
-'''
+```
 ng serve
-'''
+```
 
 The angular server will run on https://localhost:4200
 Now, you can access your web application on https://localhost:4200.
